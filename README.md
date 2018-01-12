@@ -57,7 +57,7 @@ How to install Docker
 --> Step 6) should show you the Docker version installed and step 7) should return the container runnung
 
 What are Jupyter notebook security concerns
- 1) Run the jupyter
+
 
 Anything else I may have forgotten ...
 Create at least one diagram of your overall system.
