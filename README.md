@@ -34,7 +34,7 @@ How to set up Amazon EC2
  1) Select "Launch Instance" from the EC2 dashboard in AWS
  2) Select an Amazon Machine Image (AMI) - for example Unbuntu Server
  3) Choose and insatnce type - for example t2.micro
- 4) Configure insatcne details - use the preset information
+ 4) Configure instance details - use the preset information
  5) Add storage - in the chosen example up to 30 GB are provided for free
  6) Add tags - can be ignored
  7) Configure security group - choose "Select an existing security group", then select the previously created security group
