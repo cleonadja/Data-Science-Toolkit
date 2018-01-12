@@ -17,7 +17,7 @@ How to configure a SSH key
 --> all set to connect AWS to your local machine once you set up an instance.  
     
 How to create  security groups in AWS
- 1) In AWS Services select "Security Groups" from the Resources module at the top of the page or the Network & Security module on the       left panel
+ 1) In AWS EC2 dashboard select "Security Groups" from the Resources module at the top of the page or the Network & Security module on the       left panel
  2) Select "Create Security Group", name it and give it a description
  3) on the Inbound tab confgire rules for:
     - SSH - TPC - 22 - Anywhere
@@ -28,16 +28,30 @@ How to create  security groups in AWS
 
 --> all set to use this security group with an AWS instance.
 
-How to set up Amazon EC 2
+How to set up Amazon EC2
+ 1) Select "Launch Instance" from the EC2 dashboard in AWS
+ 2) Select an Amazon Machine Image (AMI) - for example Unbuntu Server
+ 3) Choose and insatnce type - for example t2.micro
+ 4) Configure insatcne details - use the preset information
+ 5) Add storage - in the chosen example up to 30 GB are provided for free
+ 6) Add tags - can be ignored
+ 7) Configure security group - choose "Select an existing security group", then select the previously createdd security group
+ 8) Review and launch the instance
+ 9) In the final confirmation step choose and exisiting key pair and select the previously set key pair
 
-
-How to set up an AWS Operating System
+--> You should get a notification that the instance is running and you can check the state in the EC 2 dashboard under instances
 
 How to install Docker 
+ 1) In Git Bash connect to the AWS instance that was created by entering ssh ubuntu@35.165.48.162 (your public IP address)
+     - the public IP address for the created instance can be obtained by selecting the instance on the EC2 dashboard instances tab
+ 2) Check if docker is already installed by enetring docker -v
+ 3) Install Docker by enetering curl -sSL https://get.docker.com|sh
+ 4) The commmand line docker client will require sudo access in order to issue commands. Add ubuntu user to the doscker group by             entering suod usermod -aG docker ubuntu
 
 How to obtain the correct Docker image
 
 How to confirm the correct Docker image is running as a container
+
 Jupyter notebook security concerns
 Anything else I may have forgotten ...
 Create at least one diagram of your overall system.
