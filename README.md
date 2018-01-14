@@ -32,6 +32,7 @@ The below will explain how to create an AWS instance to run on a virtual machine
     - HTTP - TPC - 80 - Anywhere
     - Custom TPC Rule (Jupyter) - 8888 - Anywhere
     - Custom TPC Rule (Docker Hub) - 2376 - Anywhere
+    - Custom TPC Rule (open port) - 80 - Anywhere
 
 --> All set to use this security group with an AWS instance.
 
@@ -58,13 +59,27 @@ The below will explain how to create an AWS instance to run on a virtual machine
  4. A reboot is required for the changes to take effect. Enter `sudo reboot`
  5. Once the system has rebooted reconnect to the AWS isntance by entering `ssh ubuntu@35.165.48.162` (your public IP address)
  6. Check if Docker is installed by entering `docker -v`
- 7. Check what cdocker container is running by entering `docker ps`
+ 7. Check what docker container is running by entering `docker ps`
  
---> Step 6. should show you the Docker version installed and step 7. should return the container runnung
+--> Step 6. should show you the Docker version installed and step 7. should return the container running
 
-## What are Jupyter notebook security concerns
+## How to access Jupyter
 
+ 1. Download the Jupyter Data Science Notebook on the EC2 insatnce by enetring `docker pull jupyter/datascience-notebook` 
+    - for ease of use it can be tagged dsnb `docker tag jupyter/datascience-notebook dsnb`
+ 2. Run the image by creatinga container 'docker run -v/home/ubuntu:/home/jovyan -p 80:8888 -d dsnb`
+    - `-v` saves everything on the server
+    - `-p` connects Docker port to AWS port
+    - `-d` runs it detached
+    
+ 3. Confirm Jupyter is running `docker ps` will show all running containers
+ 4. Access Jupyter in the browser [I'm an inline-style link](http://35.165.48.162) (your public IP address)
+ 5. Retrieve access token `docker exec 576a jupyter notebook list` (first four digits of you cotainer ID)
+ 6. Copy/Paste the into the access key request in the browser.
+    - Example: token=67f4314e4acb8b1160343dcc8b5deb629badaf5288b71ec2 
 
-Anything else I may have forgotten ...
-Create at least one diagram of your overall system.
-A detailed budget of the costs of running a Jupyter Data Science Notebook Server for three months using at least three different kinds of EC 2 instances.
+## Budget of the costs of running Jupyter Data Science Notebook Server for three months using 3 different kinds of EC2 instances
+
+The costs of running the Jupyter Data Science Notebook on t2.micro, t2.small, and t2.medium for 3 months are $199,50.
+
+picture
