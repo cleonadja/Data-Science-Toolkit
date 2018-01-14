@@ -1,6 +1,10 @@
 # Data-Science-Toolkit
 How to configure a SSH key
 
+ 1) Generate a SSH key locally by entering ssh-keygen in the bash shell (Git Bash)
+ 2) The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
+ 3) Verufy the SSH key created by entering less ~/.ssh/id_rsa.pub
+
  1) Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
  2) The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
  3) Verify the ssh key created by entering less ~/.ssh/id-rsa.pub
