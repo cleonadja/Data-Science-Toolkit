@@ -7,9 +7,9 @@ The below will explain how to create an AWS instance to run on a virtual machine
 
 ## How to configure a SSH key
 
- 1. Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
- 2. The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
- 3. Verify the ssh key created by entering less ~/.ssh/id-rsa.pub
+ 1. Generate a ssh key locally by entering `ssh-keygen` in the bash shell (Git Bash)
+ 2. The key will be saved in a file locally - the generic file path would be `~/.ssh/id_rsa`
+ 3. Verify the ssh key created by entering less `~/.ssh/id-rsa.pub`
    - Sample result:
     
     ssh-rsa            AAAAB3NzaC1yc2EAAAADAQABAAABAQCrZmvU0XFx8sVt+Z+g+eKmYCzIp2/1dRgM7Mc/UHD4H2Hz61PAaKM3uksBTNDw8NOzojsKQesURXUj2OiJ5/0qFvnA4vMsFgk0xtiLdOYst+MgGQOHzhMo8+5/j6ASQxFBfZlKPV0qgw7NxYFLC0j0FMlQmumy0wIeUcmVoAgJwm/bFUbKwuYwgXV+dTXN+p8Ox2AAig+JSJprPIlCpjooXgzssNSQUSt5DzriTWQahdtiWIdehRApDyOeKGac8iTS5bdD1/7lL6mUPaXH778A77zerP/OoUmmqKMr6NZE63MhcukRFw/40Xvb9wScuZ8AVjcau7RNqzHoTeEsTiql ELSHN002@W7-PC0ED7Y8
@@ -51,14 +51,14 @@ The below will explain how to create an AWS instance to run on a virtual machine
 
 ## How to install Docker 
 
- 1. In Git Bash connect to the AWS instance that was created by entering ssh ubuntu@35.165.48.162 (your public IP address)
+ 1. In Git Bash connect to the AWS instance that was created by entering `ssh ubuntu@35.165.48.162` (your public IP address)
      - The public IP address for the created instance can be obtained by selecting the instance on the EC2 dashboard instances tab
- 2. Install Docker by entering curl -sSL https://get.docker.com|sh
- 3. The command line Docker client will require sudo access in order to issue commands. Add Ubuntu user to the Docker group by entering sudo usermod -aG docker Ubuntu
- 4. A reboot is required for the changes to take effect. Enter sudo reboot
- 5. Once the system has rebooted reconnect to the AWS isntance by entering ssh ubuntu@35.165.48.162 (your public IP address)
- 6. Check if Docker is installed by entering docker -v
- 7. Check what cdocker container is running by entering docker ps
+ 2. Install Docker by entering `curl -sSL https://get.docker.com|sh`
+ 3. The command line Docker client will require sudo access in order to issue commands. Add Ubuntu user to the Docker group by entering `sudo usermod -aG docker ubuntu`
+ 4. A reboot is required for the changes to take effect. Enter `sudo reboot`
+ 5. Once the system has rebooted reconnect to the AWS isntance by entering `ssh ubuntu@35.165.48.162` (your public IP address)
+ 6. Check if Docker is installed by entering `docker -v`
+ 7. Check what cdocker container is running by entering `docker ps`
  
 --> Step 6. should show you the Docker version installed and step 7. should return the container runnung
 
