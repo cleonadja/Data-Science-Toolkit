@@ -2,7 +2,7 @@
 
 The below will explain how to create an AWS instance to run on a virtual machine versus the local machine and using docker to run programs such as jupyter. The advanages of this method are ease of scaling memory and processing on the virtual machine and automatically managed and up to date software by using docker.
 
-![machine](https://drive.google.com/drive/folders/1eljBFrYLXAP6cvnvVESjzZsADPZcHLc6)
+![](https://drive.google.com/file/d/18__WHkBtUecTAzSrpTIaBQoiYSu8as9C/view?usp=sharing)
 
 
 How to configure a SSH key
