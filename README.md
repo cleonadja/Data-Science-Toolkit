@@ -63,6 +63,10 @@ The below will explain how to create an AWS instance to run on a virtual machine
  
 --> Step 6. should show you the Docker version installed and step 7. should return the container running
 
+Summary:
+
+![](https://github.com/cleonadja/Data-Science-Toolkit/blob/master/AWS%20Set%20up%20Process.png)
+
 ## How to access Jupyter
 
  1. Download the Jupyter Data Science Notebook on the EC2 instance by entering `docker pull jupyter/datascience-notebook` 
@@ -77,8 +81,6 @@ The below will explain how to create an AWS instance to run on a virtual machine
  5. Retrieve access token `docker exec 576a jupyter notebook list` (first four digits of you container ID)
  6. Copy/Paste the into the access key request in the browser.
     - Example: token=67f4314e4acb8b1160343dcc8b5deb629badaf5288b71ec2 
-
-![](https://github.com/cleonadja/Data-Science-Toolkit/blob/master/AWS%20Set%20up%20Process.png)
 
 ## Budget of the costs of running Jupyter Data Science Notebook Server for three months using 3 different kinds of EC2 instances
 
