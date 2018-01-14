@@ -7,15 +7,15 @@ The below will explain how to create an AWS instance to run on a virtual machine
 
 How to configure a SSH key
 
- 1) Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
- 2) The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
- 3) Verify the ssh key created by entering less ~/.ssh/id-rsa.pub
+ 1. Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
+ 2. The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
+ 3. Verify the ssh key created by entering less ~/.ssh/id-rsa.pub
     Sample result:
     
     ssh-rsa            AAAAB3NzaC1yc2EAAAADAQABAAABAQCrZmvU0XFx8sVt+Z+g+eKmYCzIp2/1dRgM7Mc/UHD4H2Hz61PAaKM3uksBTNDw8NOzojsKQesURXUj2OiJ5/0qFvnA4vMsFgk0xtiLdOYst+MgGQOHzhMo8+5/j6ASQxFBfZlKPV0qgw7NxYFLC0j0FMlQmumy0wIeUcmVoAgJwm/bFUbKwuYwgXV+dTXN+p8Ox2AAig+JSJprPIlCpjooXgzssNSQUSt5DzriTWQahdtiWIdehRApDyOeKGac8iTS5bdD1/7lL6mUPaXH778A77zerP/OoUmmqKMr6NZE63MhcukRFw/40Xvb9wScuZ8AVjcau7RNqzHoTeEsTiql ELSHN002@W7-PC0ED7Y8
     
- 4) Import SSH key to AWS instance following these steps:
-    - Launch AWS Services --> EC2
+ 4. Import SSH key to AWS instance following these steps:
+ ..1. Launch AWS Services --> EC2
     - At the top of the screen under Resources select "Key Pairs" (or on the left panel under Network & Security)
     - From the Key Pairs page select "Import Key Pair"
     - Copy/paste SSH key from bash shell into public key contents and give the key a name
