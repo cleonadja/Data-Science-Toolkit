@@ -1,9 +1,11 @@
 # Data-Science-Toolkit
-How to configure a SSH key
 
- 1) Generate a SSH key locally by entering ssh-keygen in the bash shell (Git Bash)
- 2) The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
- 3) Verufy the SSH key created by entering less ~/.ssh/id_rsa.pub
+The below will explain how to create an AWS instance to run on a virtual machine versus the local machine and using docker to run programs such as jupyter. The advanages of this method are ease of scaling memory and processing on the virtual machine and automatically managed and up to date software by using docker.
+
+!https://drive.google.com/drive/folders/1eljBFrYLXAP6cvnvVESjzZsADPZcHLc6)
+
+
+How to configure a SSH key
 
  1) Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
  2) The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
