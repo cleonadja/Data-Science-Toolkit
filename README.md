@@ -71,7 +71,7 @@ Summary:
 
  1. Download the Jupyter Data Science Notebook on the EC2 instance by entering `docker pull jupyter/datascience-notebook` 
     - for ease of use it can be tagged dsnb `docker tag jupyter/datascience-notebook dsnb`
- 2. Run the image by creating a container 'docker run -v/home/ubuntu:/home/jovyan -p 80:8888 -d dsnb`
+ 2. Run the image by creating a container `docker run -v/home/ubuntu:/home/jovyan -p 80:8888 -d dsnb`
     - `-v` saves everything on the server
     - `-p` connects Docker port to AWS port
     - `-d` runs it detached
