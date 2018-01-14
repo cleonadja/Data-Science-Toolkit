@@ -5,7 +5,7 @@ The below will explain how to create an AWS instance to run on a virtual machine
 ![AWS vs Local](https://drive.google.com/file/d/18__WHkBtUecTAzSrpTIaBQoiYSu8as9C/view?usp=sharing)
 
 
-How to configure a SSH key
+Alt-H1 How to configure a SSH key
 
  1. Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
  2. The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
