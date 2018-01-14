@@ -5,7 +5,7 @@ The below will explain how to create an AWS instance to run on a virtual machine
 ![AWS vs Local](https://drive.google.com/file/d/18__WHkBtUecTAzSrpTIaBQoiYSu8as9C/view?usp=sharing)
 
 
-Alt-H1 How to configure a SSH key
+## How to configure a SSH key
 
  1. Generate a ssh key locally by entering ssh-keygen in the bash shell (Git Bash)
  2. The key will be saved in a file locally - the generic file path would be ~/.ssh/id_rsa
@@ -22,7 +22,7 @@ Alt-H1 How to configure a SSH key
 
 --> All set to connect AWS to your local machine once you set up an instance.  
     
-How to create security groups in AWS
+## How to create security groups in AWS
 
  1. In AWS EC2 dashboard select "Security Groups" from the Resources module at the top of the page or the Network & Security module on the left panel
  2. Select "Create Security Group", name it and give it a description
@@ -35,7 +35,7 @@ How to create security groups in AWS
 
 --> All set to use this security group with an AWS instance.
 
-How to set up Amazon EC2
+## How to set up Amazon EC2
 
  1. Select "Launch Instance" from the EC2 dashboard in AWS
  2. Select an Amazon Machine Image (AMI) - for example Unbuntu Server
@@ -49,7 +49,7 @@ How to set up Amazon EC2
 
 --> You should get a notification that the instance is running and you can check the state in the EC 2 dashboard under instances
 
-How to install Docker 
+## How to install Docker 
 
  1. In Git Bash connect to the AWS instance that was created by entering ssh ubuntu@35.165.48.162 (your public IP address)
      - The public IP address for the created instance can be obtained by selecting the instance on the EC2 dashboard instances tab
@@ -62,7 +62,7 @@ How to install Docker
  
 --> Step 6. should show you the Docker version installed and step 7. should return the container runnung
 
-What are Jupyter notebook security concerns
+## What are Jupyter notebook security concerns
 
 
 Anything else I may have forgotten ...
