@@ -7,7 +7,7 @@ The below will explain how to create an AWS instance to run on a virtual machine
 
 ## How to configure a SSH key
 
- 1. Generate a ssh key locally by entering `ssh-keygen` in the bash shell (Git Bash)
+ 1. Generate a SSH key locally by entering `ssh-keygen` in the bash shell (Git Bash)
  2. The key will be saved in a file locally - the generic file path would be `~/.ssh/id_rsa`
  3. Verify the ssh key created by entering less `~/.ssh/id-rsa.pub`
    - Sample result:
@@ -40,7 +40,7 @@ The below will explain how to create an AWS instance to run on a virtual machine
 
  1. Select "Launch Instance" from the EC2 dashboard in AWS
  2. Select an Amazon Machine Image (AMI) - for example Unbuntu Server
- 3. Choose and insatnce type - for example t2.micro
+ 3. Choose and instance type - for example t2.micro
  4. Configure instance details - use the preset information
  5. Add storage - in the chosen example up to 30 GB are provided for free
  6. Add tags - can be ignored
@@ -57,24 +57,24 @@ The below will explain how to create an AWS instance to run on a virtual machine
  2. Install Docker by entering `curl -sSL https://get.docker.com|sh`
  3. The command line Docker client will require sudo access in order to issue commands. Add Ubuntu user to the Docker group by entering `sudo usermod -aG docker ubuntu`
  4. A reboot is required for the changes to take effect. Enter `sudo reboot`
- 5. Once the system has rebooted reconnect to the AWS isntance by entering `ssh ubuntu@35.165.48.162` (your public IP address)
+ 5. Once the system has rebooted reconnect to the AWS instance by entering `ssh ubuntu@35.165.48.162` (your public IP address)
  6. Check if Docker is installed by entering `docker -v`
- 7. Check what docker container is running by entering `docker ps`
+ 7. Check what Docker container is running by entering `docker ps`
  
 --> Step 6. should show you the Docker version installed and step 7. should return the container running
 
 ## How to access Jupyter
 
- 1. Download the Jupyter Data Science Notebook on the EC2 insatnce by enetring `docker pull jupyter/datascience-notebook` 
+ 1. Download the Jupyter Data Science Notebook on the EC2 instance by entering `docker pull jupyter/datascience-notebook` 
     - for ease of use it can be tagged dsnb `docker tag jupyter/datascience-notebook dsnb`
- 2. Run the image by creatinga container 'docker run -v/home/ubuntu:/home/jovyan -p 80:8888 -d dsnb`
+ 2. Run the image by creating a container 'docker run -v/home/ubuntu:/home/jovyan -p 80:8888 -d dsnb`
     - `-v` saves everything on the server
     - `-p` connects Docker port to AWS port
     - `-d` runs it detached
     
  3. Confirm Jupyter is running `docker ps` will show all running containers
  4. Access Jupyter in the browser [http://35.165.48.162] (your public IP address)
- 5. Retrieve access token `docker exec 576a jupyter notebook list` (first four digits of you cotainer ID)
+ 5. Retrieve access token `docker exec 576a jupyter notebook list` (first four digits of you container ID)
  6. Copy/Paste the into the access key request in the browser.
     - Example: token=67f4314e4acb8b1160343dcc8b5deb629badaf5288b71ec2 
 
