@@ -2,7 +2,7 @@
 
 The below will explain how to create an AWS instance to run on a virtual machine versus the local machine and using docker to run programs such as jupyter. The advanages of this method are ease of scaling memory and processing on the virtual machine and automatically managed and up to date software by using docker.
 
-![AWS vs Local](C:\Users\elshn002\Documents\personal\Data Science Class\Machine.png
+![AWS vs. local](https://github.com/cleonadja/Data-Science-Toolkit/blob/master/Machine.png)
 
 
 ## How to configure a SSH key
@@ -73,7 +73,7 @@ The below will explain how to create an AWS instance to run on a virtual machine
     - `-d` runs it detached
     
  3. Confirm Jupyter is running `docker ps` will show all running containers
- 4. Access Jupyter in the browser [I'm an inline-style link](http://35.165.48.162) (your public IP address)
+ 4. Access Jupyter in the browser [http://35.165.48.162] (your public IP address)
  5. Retrieve access token `docker exec 576a jupyter notebook list` (first four digits of you cotainer ID)
  6. Copy/Paste the into the access key request in the browser.
     - Example: token=67f4314e4acb8b1160343dcc8b5deb629badaf5288b71ec2 
@@ -82,4 +82,4 @@ The below will explain how to create an AWS instance to run on a virtual machine
 
 The costs of running the Jupyter Data Science Notebook on t2.micro, t2.small, and t2.medium for 3 months are $199,50.
 
-picture
+![Cost Analysis](https://github.com/cleonadja/Data-Science-Toolkit/blob/master/Cost%20Analysis.png)
